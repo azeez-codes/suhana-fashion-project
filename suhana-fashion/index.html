@@ -27,7 +27,6 @@
         </nav>
     </header>
 
-
     <section class="hero" id="home">
         <div class="hero-wrapper">
             <div class="hero-left">
@@ -53,7 +52,6 @@
             </div>
         </div>
     </section>
-
 
     <section class="collections" id="collections">
         <h2>Latest Collections</h2>
@@ -118,7 +116,6 @@
         </div>
     </section>
 
-
     <section class="features" id="featured">
         <div class="features-content">
             <span>Crafted with Passion</span>
@@ -157,7 +154,6 @@
         </div>
     </section>
 
-
     <section class="testimonials">
         <h2>What Our Customers Say</h2>
         <p class="testimonial-subtitle">Real stories from fashion enthusiasts</p>
@@ -178,7 +174,8 @@
             </div>
             <div class="testimonial">
                 <div class="stars">★★★★★</div>
-                <p>"The sustainable approach combined with luxury design is exactly what I was looking for. SUHANA proves
+                <p>"The sustainable approach combined with luxury design is exactly what I was looking for. SUHANA
+                    proves
                     you don't have to compromise."
                 </p>
                 <div class="author">
@@ -202,29 +199,31 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
+
     <section class="contact" id="contact">
         <h2> Get In Touch</h2>
         <p class="contact-subtitle">We'd love to hear from you</p>
         <div class="contact-content">
             <div class="contact-form card">
-                <form action="">
+                <form id="contactForm">
                     <div class="row">
                         <div>
-                            <label for="">First Name</label>
-                            <input type="text" placeholder="Mohammed">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Mohammed">
                         </div>
                         <div>
-                            <label for="">Last Name</label>
-                            <input type="text" placeholder="Azeez">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Azeez">
                         </div>
                     </div>
-                    <label for="">Email</label>
-                    <input type="email" placeholder="azeezmohd@example.com">
-                    <label for="">Subject</label>
-                    <input type="text" placeholder="How can we help?">
-                    <label for="">Message</label>
-                    <textarea placeholder="Tell us more about your inquiry..." name="" id=""></textarea>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="azeezmohd@example.com">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="How can we help?">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us more about your inquiry..."></textarea>
 
                     <button type="submit">Send Message</button>
 
@@ -263,11 +262,9 @@
         </div>
     </section>
 
-
     <section class="map-section">
         <iframe src="https://www.google.com/maps?q=Gachibowli,Hyderabad&output=embed" loading="lazy"></iframe>
     </section>
-
 
     <footer class="footer">
         <div class="footer-content">
@@ -365,6 +362,15 @@
                     }
                 });
             });
+        });
+        const contactForm = document.getElementById("contactForm");
+
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            alert("Thank you! Your message has been sent.");
+
+            contactForm.reset();
         });
     </script>
 
